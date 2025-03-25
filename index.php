@@ -31,7 +31,8 @@ include 'src/components/navbar.php';
                     <td><?php echo $asset['description']; ?></td>
                     <td>
                         <a href="src/views/edit-asset.php?id=<?php echo $asset['id']; ?>" class="btn btn-warning">Edit</a>
-                        <a href="src/controllers/AssetController.php?action=delete&id=<?php echo $asset['id']; ?>" class="btn btn-danger">Delete</a>
+                        <a href="src/controllers/AssetController.php?action=delete&id=<?php echo $asset['id']; ?>"
+                            class="btn btn-danger">Delete</a>
                         <a href="src/views/view-asset.php?id=<?php echo $asset['id']; ?>" class="btn btn-info">View</a>
                     </td>
                 </tr>

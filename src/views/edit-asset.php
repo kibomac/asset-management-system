@@ -24,12 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Edit Asset</title>
 </head>
+
 <body>
     <?php include '../components/header.php'; ?>
     <?php include '../components/navbar.php'; ?>
@@ -40,19 +42,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="hidden" name="id" value="<?php echo htmlspecialchars($asset['id']); ?>">
             <div class="form-group">
                 <label for="name">Asset Name:</label>
-                <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($asset['name']); ?>" required>
+                <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($asset['name']); ?>"
+                    required>
             </div>
             <div class="form-group">
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" required><?php echo htmlspecialchars($asset['description']); ?></textarea>
+                <textarea id="description" name="description"
+                    required><?php echo htmlspecialchars($asset['description']); ?></textarea>
             </div>
             <div class="form-group">
                 <label for="value">Value:</label>
-                <input type="number" id="value" name="value" value="<?php echo htmlspecialchars($asset['value']); ?>" required>
+                <input type="number" id="value" name="value" value="<?php echo htmlspecialchars($asset['value']); ?>"
+                    required>
             </div>
             <div class="form-group">
                 <label for="location">Location:</label>
-                <input type="text" id="location" name="location" value="<?php echo htmlspecialchars($asset['location']); ?>" required>
+                <input type="text" id="location" name="location"
+                    value="<?php echo htmlspecialchars($asset['location']); ?>" required>
             </div>
             <button type="submit">Update Asset</button>
         </form>
@@ -60,4 +66,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php include '../components/footer.php'; ?>
 </body>
+
 </html>
